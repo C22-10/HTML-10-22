@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Розклад групи</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin: 0;
+            color: black;
+            background-image: url('1234.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        #logo {
+            margin-left: 120px;
+            margin-top: -125px;
+            max-width: 250px;
+        }
+
+        #schedule-container {
+            flex: 1;
+            margin-left: 250px;
+            margin-top: 100px;
+        }
+
+        #schedule {
+            width: 110%;
+        }
+
+        #schedule th,
+        #schedule td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+
+        #schedule th {
+            background-color: #f0f0f0;
+        }
+
+        table.vertical {
+            border-collapse: collapse;
+        }
+
+        table.vertical td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+            width: 100px;
+        }
+
+        h1 {
+            font-weight: bold;
+            margin-top: 50px;
+        }
+
+        aside {
+            margin-top: 170px;
+            margin-left: -210px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        tr:hover {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .error-message {
+            color: red;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Розклад занять</h1>
+    <div id="container">
+        <div id="schedule-container">
+            <table id="schedule" class="vertical">
+                <thead>
+                    <tr>
+                        <th>Години занять</th>
+                        <th>Понеділок</th>
+                        <th>Вівторок</th>
+                        <th>Середа</th>
+                        <th>Четвер</th>
+                        <th>П'ятниця</th>
+                        <th>Субота</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09:00 - 10:30</td>
+                        <td>Математика</td>
+                        <td>Фізика</td>
+                        <td>Хімія</td>
+                        <td>Історія</td>
+                        <td>Література</td>
+                        <td>Іноземна мова</td>
+                    </tr>
+                    <tr>
+                        <td>10:30 - 12:00</td>
+                        <td>Біологія</td>
+                        <td>Англійська мова</td>
+                        <td>Географія</td>
+                        <td>Музика</td>
+                        <td>Фізкультура</td>
+                        <td>Інформатика</td>
+                    </tr>
+                    <tr>
+                        <td>12:00 - 13:30</td>
+                        <td>Хімія</td>
+                        <td>Українська мова</td>
+                        <td>Фізика</td>
+                        <td>Фізкультура</td>
+                        <td>Інформатика</td>
+                        <td>Математика</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="logo">
+            <img src="123.png" alt="Логотип установи">
+        </div>
+        <aside>
+            <h2 style="text-align: center;">Реєстрація</h2>
+            <form action="registr.html" method="post" onsubmit="return validateForm()">
+                <input type="text" id="ім'я" name="ім'я" required placeholder="Ім'я"><br>
+                <input type="text" id="прізвище" name="прізвище" required placeholder="Прізвище"><br>
+                <input type="email" id="email" name="email" required placeholder="Електронна пошта"><br>
+                <input type="password" id="пароль" name="пароль" required placeholder="Пароль"><br>
+                <input type="password" id="підтвердження_пароля" name="підтвердження_пароля" required placeholder="Підтвердіть пароль"><br>
+                <span id="error-message" class="error-message"></span><br>
+                <input type="submit" value="Зареєструватися" class="submit-button">
+            </form>
+        </aside>
+    </div>
+    <script>
+        function validateForm() {
+            var password = document.getElementById("пароль").value;
+            var confirmPassword = document.getElementById("підтвердження_пароля").value;
+
+            if (password !== confirmPassword) {
+                document.getElementById("error-message").innerText = "Паролі не співпадають!";
+                return false;
+            } else {
+                document.getElementById("error-message").innerText = "";
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
