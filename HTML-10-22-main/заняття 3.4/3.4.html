@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tasks</title>
+    <script>
+        function modifyArray(inputArray) {
+            // Додає новий елемент "start" на початок масиву.
+            inputArray.unshift("start");
+
+            // Видаляє останній елемент масиву.
+            inputArray.pop();
+
+            // Змінює значення другого елементу масиву на "modified".
+            if (inputArray.length >= 2) {
+                inputArray[1] = "modified";
+            }
+
+            // Повертає модифікований масив.
+            return inputArray;
+        }
+
+        function arrayOperations(inputArray) {
+            // Додає новий елемент "end" в кінець масиву.
+            inputArray.push("end");
+
+            // Видаляє перший елемент масиву.
+            inputArray.shift();
+
+            // Використовує метод рісе для вставки нового елементу "middle" після третього елемента масиву.
+            inputArray.splice(3, 0, "middle");
+
+            // Повертає модифікований масив.
+            return inputArray;
+        }
+
+        function checkInteger(number) {
+            // Перевіряє, чи число ціле.
+            if (Number.isInteger(number)) {
+                return "Число ціле";
+            } else {
+                return "Число не ціле";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <script>
+        // Приклад використання функцій
+        var array1 = [1, 2, 3, 4, 5];
+        var modifiedArray1 = modifyArray(array1);
+        console.log(modifiedArray1);
+
+        var array2 = [1, 2, 3, 4, 5];
+        var modifiedArray2 = arrayOperations(array2);
+        console.log(modifiedArray2);
+
+        var number1 = 42;
+        var result1 = checkInteger(number1);
+        console.log(result1);
+
+        var number2 = 3.14;
+        var result2 = checkInteger(number2);
+        console.log(result2);
+    </script>
+
+</body>
+</html>

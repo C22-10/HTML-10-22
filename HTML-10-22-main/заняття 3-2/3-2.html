@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Приклад</title>
+    <style>
+        #heading, .content, #list li {
+            transition: color 0.5s; /* Додано плавну зміну кольору */
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Простий HTML-документ</h1>
+    <p class="content">Це приклад для роботи з DOM.</p>
+    <ul id="list">
+        <li>Елемент 1</li>
+        <li>Елемент 2</li>
+        <li>Елемент 3</li>
+    </ul>
+    <a href="#" id="link">Посилання</a>
+
+    <script>
+        // Функція для генерації випадкового кольору
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Застосування випадкового кольору до заголовка
+        const heading = document.getElementById("heading");
+        setInterval(() => {
+            heading.style.color = getRandomColor();
+        }, 1000); // Змінює колір кожну секунду
+
+        // Застосування випадкового кольору до пунктів тексту
+        const contentElements = document.getElementsByClassName("content");
+        setInterval(() => {
+            for (const element of contentElements) {
+                element.style.color = getRandomColor();
+            }
+        }, 1000);
+
+        // Застосування випадкового кольору до пунктів списку
+        const listItems = document.querySelectorAll("#list li");
+        setInterval(() => {
+            listItems.forEach(item => {
+                item.style.color = getRandomColor();
+            });
+        }, 1000);
+
+        // Обробник подій залишається без змін
+        const link = document.getElementById("link");
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Відміна стандартної дії посилання
+            alert("Посилання було клікнуте!");
+        });
+    </script>
+</body>
+</html>

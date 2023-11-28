@@ -1,0 +1,130 @@
+/* Застосувати шрифт "Roboto" для всього тексту */
+body {
+    font-family: "Roboto", Arial, sans-serif;
+    /* Вказано шрифт "Roboto", а потім альтернативні шрифти, які браузери використовують у разі відсутності "Roboto" */
+}
+
+/* Стилі для заголовка h1 */
+.header h1 {
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Стилі для навігаційного списку */
+.header ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.header ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.header a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.header a:hover {
+    color: #ff6600; /* Змінити колір при наведенні курсора */
+}
+
+/* Стилі для розділу контенту */
+.content {
+    padding: 20px;
+}
+
+.content h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.content li {
+    margin-bottom: 10px;
+}
+
+/* Стилі для форми зв'язку */
+.form {
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.form h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.form label {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form button[type="submit"] {
+    width: 100%; /* Зробити ширину 100% */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center; /* Додати вирівнювання тексту по центру */
+}
+
+.form button[type="submit"] {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form button[type="submit"]:hover {
+    background-color: #ff3300;
+}
+
+/* Стилі для таблиці з данними */
+.table {
+    padding: 20px;
+}
+
+.table h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Загальні стилі */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Форма для введення особистої інформації</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rectangle {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            text-align: center; 
+        }
+
+        .submit-button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <aside-container>
+        <aside class="rectangle">
+            <form action="/submit" method="post" target="_blank">
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="surname">Прізвище:</label>
+                <input type="text" id="surname" name="surname" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required><br><br>
+
+                <input type="submit" value="Відправити" class="submit-button">
+            </form>
+        </aside>
+    </aside-container>
+</div>
+</body>
+</html>

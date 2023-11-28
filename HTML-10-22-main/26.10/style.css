@@ -1,0 +1,80 @@
+/* Загальні стилі */
+body {
+    background-image: url('2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-family: 'Times New Roman', sans-serif; /* Замініть шрифт на ваш вибір */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-attachment: fixed;
+}
+
+/* Горизонтальна панель навігації */
+.horizontal-nav {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    position: fixed; /* Додайте фіксовану позицію */
+    top: 0; /* Закріпіть зверху */
+    z-index: 100; /* Додайте з індексом вище, щоб навігація була поверх іншого контенту */
+}
+
+.horizontal-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 220px; /* Змініть padding на бажаний */
+    transition: background-color 0.3s, transform 0.3s; /* Додайте анімацію при наведенні */
+}
+
+.horizontal-nav a:hover {
+    background-color: #555;
+    transform: scale(1.1); /* Збільшити кнопку при наведенні */
+}
+
+.design-element {
+    background-color: white;
+    height: 1px;
+    width: 20px;
+    margin: 0 10px;
+}
+
+/* Вертикальна панель навігації */
+.vertical-nav {
+    background-color: #333;
+    width: 100px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.vertical-nav a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+    padding: 10px;
+    transition: background-color 0.3s, transform 0.3s; /* Додайте анімацію при наведенні */
+}
+
+.vertical-nav a:hover {
+    background-color: #555;
+    transform: scale(1.1); /* Збільшити кнопку при наведенні */
+}
+
+.design-element {
+    background-color: white;
+    height: 0px;
+    width: 20px;
+    margin: 0 10px;
+}
